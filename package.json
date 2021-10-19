@@ -1,0 +1,105 @@
+{
+  "name": "@weahead/datocms-plugin-translated-strings",
+  "homepage": "https://github.com/weahead/datocms-plugin-translated-strings",
+  "version": "1.0.0",
+  "description": "Use a keybased translation for every language currently active",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server --port 5000",
+    "dist": "NODE_ENV=production webpack --progress",
+    "addToProject": "yo datocms-plugin:add-to-project",
+    "prepublishOnly": "rimraf lib dist && mkdir dist && npm run dist",
+    "test": "echo 1"
+  },
+  "keywords": [
+    "datocms",
+    "datocms-plugin",
+    "field-editor",
+    "json-field",
+    "translation",
+    "translate",
+    "multi-lang"
+  ],
+  "files": [
+    "dist",
+    "docs"
+  ],
+  "author": "We Ahead AB <alla@weahead.se>",
+  "license": "SEE LICENSE IN LICENSE",
+  "datoCmsPlugin": {
+    "title": "Translated Strings",
+    "previewImage": "docs/table-layout.png",
+    "coverImage": "docs/graphql-query-results.png",
+    "entryPoint": "dist/index.html",
+    "pluginType": "field_editor",
+    "fieldTypes": [
+      "json"
+    ],
+    "parameters": {
+      "global": [
+        {
+          "id": "developmentMode",
+          "label": "Development mode",
+          "type": "boolean",
+          "required": true,
+          "default": false,
+          "hint": "Shows debug messages in console"
+        }
+      ],
+      "instance": [
+        {
+          "id": "addItem",
+          "label": "Editor may add item",
+          "type": "boolean",
+          "default": true
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.54",
+    "@babel/core": "^7.0.0-beta.54",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.1.2",
+    "@babel/preset-env": "^7.0.0-beta.54",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.15.0",
+    "@babel/register": "^7.0.0-beta.54",
+    "@types/node": "^16.11.1",
+    "@types/react": "^17.0.30",
+    "@types/react-dom": "^17.0.9",
+    "babel-eslint": "^8.2.6",
+    "babel-loader": "^8.0.0-beta",
+    "css-loader": "^1.0.0",
+    "generator-datocms-plugin": "^1.0.24",
+    "html-webpack-inline-source-plugin": "^0.0.10",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.3",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "serve": "^10.0.2",
+    "style-loader": "^0.23.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.4",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.10",
+    "yo": "^4.3.0"
+  },
+  "dependencies": {
+    "classname": "^0.0.0",
+    "html-webpack-tags-plugin": "^2.0.17",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weahead/datocms-plugin-translated-strings.git"
+  },
+  "bugs": {
+    "url": "https://github.com/weahead/datocms-plugin-translated-strings/issues"
+  }
+}

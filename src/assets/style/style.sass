@@ -1,0 +1,102 @@
+.container
+  background-color: white
+  padding: 24px
+
+button
+  align-items: center
+  background: none
+  border-radius: 5px
+  border-style: solid
+  border-width: 1px
+  cursor: pointer
+  display: flex
+  height: 42px
+  padding: 8px 16px
+  transition: border-color 300ms ease
+
+  &:disabled
+    cursor: not-allowed
+
+    &.btn.btn--add
+      border-color: lightgrey
+
+      &:hover
+        border-color: lightgrey
+
+    svg
+      fill: grey
+      flex: 1
+      font-size: 20px
+
+  &.btn
+    &.btn--add
+      border-color: aliceblue
+      text-transform: uppercase
+
+      &:hover
+        border-color: lightblue
+
+      span
+        display: inline-block
+        margin-left: 12px
+
+    &.btn--delete
+      border-color: #b71f1f
+
+      svg
+        fill: #b71f1f
+        flex: 1
+        transition: fill 300ms ease
+
+      &:hover
+        border-color: red
+
+        svg
+          fill: red
+
+table
+  display: grid
+  gap: 20px
+  width: 100%
+
+  thead
+    th
+      border-bottom: 1px solid lightgrey
+
+  tbody
+    tr
+      &:last-of-type
+        margin-bottom: 40px
+
+  tbody,
+  thead
+    tr
+      align-items: center
+      display: flex
+
+      & > :first-child
+        flex: 2
+
+      & > :last-child
+        align-self: flex-end
+        border-bottom: none
+        flex: 50px 0 0
+        height: 42px
+
+      & > :nth-child(n+2)
+        margin-left: 12px
+
+      td,
+      th
+        flex: 3
+        font-weight: normal
+        line-height: normal
+        text-transform: uppercase
+
+        input[type="text"]
+          border-radius: 5px
+          height: 42px
+
+          &:required
+            &:invalid
+              border-color: #db6161
