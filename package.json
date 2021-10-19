@@ -1,7 +1,7 @@
 {
   "name": "@weahead/datocms-plugin-translated-strings",
   "homepage": "https://github.com/weahead/datocms-plugin-translated-strings",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use a keybased translation for every language currently active",
   "main": "index.js",
   "scripts": {
